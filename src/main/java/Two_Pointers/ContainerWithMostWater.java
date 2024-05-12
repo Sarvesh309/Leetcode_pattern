@@ -18,10 +18,11 @@ public class ContainerWithMostWater {
             if (temp > result)
                 result = temp;
 
+            //If left block height is greater decrement the right side pointer
             if (lheight > rheight)
                 right--;
             else
-                left++;
+                left++;     // else if right block is greater increment the left side pointer
         }
         return result;
     }

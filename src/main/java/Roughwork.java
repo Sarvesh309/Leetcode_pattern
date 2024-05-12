@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Roughwork {
 
@@ -15,7 +16,12 @@ public class Roughwork {
 //        HashMap<Character, Integer> mp = new HashMap<>();
 //        Integer ans = mp.getOrDefault("a", 2);
         System.out.println(Integer.parseInt("22nd"));
-
+        Queue<Integer> queue = new LinkedList<>();
+        Map<Integer, String> temp= new HashMap<>();
+        temp.entrySet().stream().sorted(Map.Entry.comparingByKey()).collect(HashMap::new,
+                (m, e) -> m.put(e.getKey(), e.getValue()),
+                HashMap::putAll
+        );
     }
     static void binarySearch(int first_index, int last_index, int[] citations, int[] answer){
         if(first_index>last_index){

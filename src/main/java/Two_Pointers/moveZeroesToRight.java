@@ -13,12 +13,12 @@ public class moveZeroesToRight {
     }
 
     private static void moveZeroes(int[] arr) {
-        int zeroPointr = 0;
+        int nonZeroPointer = 0;
         for (int i = 0; i < arr.length; i++) {
             if(arr[i]!=0){
-                swap(arr,i,zeroPointr);
-                zeroPointr++;               //This is very important step to ensure correct placing of zeroPointer
-                                            // i.e:- on first occurence of 0 after the previously swapped zeroth position
+                swap(arr,i,nonZeroPointer);
+                nonZeroPointer++;               //This is very important step to ensure correct placing of zeroPointer
+                                            // i.e:- on first occurence of 0 after the previously swapped non-zeroth position
             }
         }
 

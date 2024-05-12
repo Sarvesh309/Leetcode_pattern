@@ -18,16 +18,17 @@ public class DutchNationalFlag_ThreePointerAlgorithm {
         int mid = 0;
         int high = arr.length - 1;
 
+        //mid pointer will automatically move ahead with the conditions below, no need to increment it explicitly
         while (mid <= high) {
             if (arr[mid] == 0) {
                 swap(arr, low, mid);
-                low++;
+                low++;                    // increment 0's pointer
 //                mid++;
             } else if (arr[mid] == 1) {
-                mid++;
+                mid++;                    // increment 1's pointer
             } else if (arr[mid] == 2) {
                 swap(arr, mid, high);
-                high--;
+                high--;                   // decrement 2's pointer
             }
         }
     }

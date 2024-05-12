@@ -28,8 +28,10 @@ public class Merge_Two_sorted_list {
                 right++;
             }
         }
+        //if left pointer of list1 reaches the end
         if (left == list1.size()) {
             result.addAll(list2.subList(right, list2.size()));
+            //if right pointer of list2 reaches end
         } else if (right == list2.size()) {
             result.addAll(list1.subList(left, list1.size()));
         }
