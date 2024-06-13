@@ -2,8 +2,13 @@ package prefix_sum;
 
 import java.util.Arrays;
 
+//You are given an integer array gain of length n where gain[i] is the net gain in altitude between points
+//Return the highest altitude of a point.
+//Input: gain = [-5,1,5,0,-7]
+//Output: 1
+//The altitudes are [0,-5,-4,1,1,-6].
+// The highest is 1.
 
-//Generally subarray + even odd = prefix sum
 public class FindHighestAltitude {
     public static void main(String[] args) {
         int[] gain = new int[]{-5, 1, 5, 0, -7};
