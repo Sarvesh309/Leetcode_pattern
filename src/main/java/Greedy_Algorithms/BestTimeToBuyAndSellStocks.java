@@ -6,17 +6,17 @@ public class BestTimeToBuyAndSellStocks {
 
         //Initialize the result and intermediate min_value properly
         int result = Integer.MIN_VALUE;
-        int min_stock_price_till_now = Integer.MAX_VALUE;
+        int curr_min = Integer.MAX_VALUE;
 
 
         for (int price : prices) {
-            //first update the min stock price
-            if (price < min_stock_price_till_now) {
-                min_stock_price_till_now = price;
+            //first update the min value
+            if (price < curr_min) {
+                curr_min = price;
             }
             //Subsequently update the profit thereafter
-            if (result < (price - min_stock_price_till_now)) {
-                result = price - min_stock_price_till_now;
+            if (result < (price - curr_min)) {
+                result = price - curr_min;
             }
         }
         System.out.println(result);
