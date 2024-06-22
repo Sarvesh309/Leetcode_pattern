@@ -1,4 +1,4 @@
-package String;
+package DynamicProgramming;
 
 public class LongestPalindromeSubstring {
     public static void main(String[] args) {
@@ -21,8 +21,7 @@ public class LongestPalindromeSubstring {
             start_index = i;
             dp[i][i] = true;
         }
-        // Note here the end is outer for loop & start inner forloop ie. This way the smaller substrings are appropriately traversed
-        // in order to depict palindromicity for larger substrings
+        // Note here the end is fixed, start varies for each candidate substring
         for (int end = 0; end < dp.length; end++) {
             for (int start = 0; start < end; start++) {
                 if (str.charAt(start) == str.charAt(end) && (dp[start + 1][end - 1] || (end - start)<=1)) {

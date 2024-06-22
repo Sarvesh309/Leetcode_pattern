@@ -10,7 +10,10 @@ public class TargetSumSubset {
 
     private static void targetSumRecursion(int[] arr, int target, int index, int sum_till_node, String subset) {
 
-        if (index >= arr.length) {
+        if (index > arr.length) {
+            return;
+        }
+        if (index == arr.length) {
             if (target == sum_till_node) {
                 System.out.println(subset);
             }
