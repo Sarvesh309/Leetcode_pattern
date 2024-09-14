@@ -25,16 +25,6 @@ public class IsMirrorTree {
         if (left == null || right == null) {
             return false;
         }
-        return left.key == right.key && isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);
-    }
-}
-
-class Node {
-    int key;
-    Node left, right;
-
-    Node(int item) {
-        key = item;
-        left = right = null;
+        return left.data == right.data && isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);
     }
 }

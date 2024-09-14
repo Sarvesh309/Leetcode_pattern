@@ -1,4 +1,4 @@
-package RecursionAndBacktracking.backtracking;
+package RecursionAndBacktracking.recursion;
 
 public class TargetSumSubset {
     public static void main(String[] args) {

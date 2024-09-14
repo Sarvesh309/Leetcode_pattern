@@ -1,0 +1,20 @@
+1. For Top View, Bottom View, Left View, Right View
+   -> Maintain Global width max, height max, Map<Integer, List<Node>> mapping - for maintaining nodes at each level/Width
+
+2. Maximum Width of Binary Tree :-
+    -> Prerequisite:- Need to know the index formula at each level in case of Binary Tree
+
+3. Given a Binary Tree of nodes, find all the possible paths from the root node to all the leaf nodes of the binary tree.
+    -> Post-Order Traversal- return list in the recursive function
+
+4.  Given the root of a binary tree, return the length of the diameter of the tree. (2 nodes = 1 edge)
+    -> Post-Order Traversal- Maintain global max_edge/max_node as well as for every Node return maximum edges from their left & right subtrees locally from recursive function.
+
+5. Check if tree is height Balanced Binary Tree
+    -> In this , we recursively find height and return if it is balanced or not
+
+6. purely TOP-BOTTOM Approach -> Preorder Traversal
+   purely BOTTOM-TOP approach -> PostOrder Traversal
+   purely LEFT-RIGHT approach -> Inorder traversal
+
+
