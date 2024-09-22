@@ -5,10 +5,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Node {
-    int data;
-    Node left, right;
+    public int data;
+    public Node left, right;
 
-    Node(int item) {
+    public Node(int item) {
         data = item;
         left = right = null;
     }
@@ -17,7 +17,7 @@ public class Node {
      * @param Input String with level order traversal of tree
      * @return Builds the required tree and returns root node for that tree
      */
-    static Node buildTree(String str) {
+    public static Node buildTree(String str) {
 
         if (str.isEmpty() || str.charAt(0) == 'N') {
             return null;
@@ -73,12 +73,19 @@ public class Node {
         return root;
     }
 
-    static void printInorder(Node root) {
+    public static void printInorder(Node root) {
         if (root == null)
             return;
 
         printInorder(root.left);
         System.out.print(root.data + " ");
         printInorder(root.right);
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "data=" + data +
+                '}';
     }
 }

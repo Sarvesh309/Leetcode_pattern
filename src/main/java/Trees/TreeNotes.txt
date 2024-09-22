@@ -17,4 +17,11 @@
    purely BOTTOM-TOP approach -> PostOrder Traversal
    purely LEFT-RIGHT approach -> Inorder traversal
 
+7. Left View is different from Left Boundary traversal---- left View != left Boundary
+    left view may contain additional nodes which are not part of left boundary nodes
+
+8. PreOrder -> Top-Down approach
+   InOrder/PostOrder -> Bottom-Up Approach
+
+
 

@@ -1,4 +1,11 @@
-package Trees;
+package Trees.BinaryTree;
+
+//Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
+
+//Input: root = [1,2,2,3,4,4,3]
+//Output: true
+
+import Trees.Node;
 
 public class IsMirrorTree {
     Node root;
@@ -17,14 +24,20 @@ public class IsMirrorTree {
         System.out.println("Tree is Symmetric: " + isSymmetric);
     }
 
-    boolean isSymmetric(Node left, Node right) {
-        if (left == null && right == null) {
+    boolean isSymmetric(Node leftNode, Node rightNode) {
+
+        if (leftNode == null && rightNode == null)
             return true;
-        }
+
         //This condition is basically simplified version of (left!=null && right==null) || (left==null && right!=null)
-        if (left == null || right == null) {
+        if (leftNode == null || rightNode == null)
             return false;
-        }
-        return left.data == right.data && isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);
+
+        if (leftNode.data != rightNode.data)
+            return false;
+
+        boolean isLeftSymmetric = isSymmetric(leftNode.left, rightNode.right);
+        boolean isRightSymmetric = isSymmetric(leftNode.right, rightNode.left);
+        return isLeftSymmetric && isRightSymmetric;
     }
 }

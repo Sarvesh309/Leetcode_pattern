@@ -1,4 +1,6 @@
-package Trees;
+package Trees.BinaryTree;
+
+import Trees.Node;
 
 import static Trees.Node.buildTree;
 
@@ -9,21 +11,21 @@ import static Trees.Node.buildTree;
 //Input: root = [3,9,20,null,null,15,7]
 //Output: true
 
-public class IsBinaryTreeBalanced {
+public class IsBinaryTreeHeightBalanced {
 
     public static void main(String[] args) {
         String input = "3 9 20 N N 15 7";
         Node root = buildTree(input);
-        IsBinaryTreeBalanced obj = new IsBinaryTreeBalanced();
-        boolean isBalanced = obj.isBalanced(root);
+
+        boolean isBalanced = isBalanced(root);
         System.out.println(isBalanced);
     }
 
-    public boolean isBalanced(Node root) {
+    public static boolean isBalanced(Node root) {
         return recursion(root);
     }
 
-    boolean recursion(Node node) {
+    static boolean recursion(Node node) {
         if (node == null) {
             return true;
         }
@@ -33,7 +35,7 @@ public class IsBinaryTreeBalanced {
         return true;
     }
 
-    int findHeight(Node node) {
+    static int findHeight(Node node) {
         if (node == null) {
             return 0;
         }
