@@ -8,7 +8,6 @@ public class PrintPermutations {
     }
 
     private static void printPermutations(String input, String output) {
-
         if (input.isEmpty()) {
             System.out.println(output);
             return;

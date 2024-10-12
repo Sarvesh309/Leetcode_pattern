@@ -1,0 +1,20 @@
+int & chars are interchangable (primitives)
+Every char has an numeric ascii value associated with it.
+& ints(not all) have corresponding character assigned to it
+
+for ex:- char c = 49 valid  sout will print A
+int y = 'K' valid  sout will print 75
+
+IMP:- for recursion
+The answer making base condition should always be at the top of the recursive function even before the terminating base conditions
+considering the answer for current node is evaluated at next node.
+
+Above observation is subjective to the fact that answwer evaluation for current happens at next node
+because Index outof bound may arrive if terminating conditions are before the answer making ones
+
+If the answer evaluation is at the current node, then write base condition after making the all recursive calls
+ie:- at the end of the function.
+
+
+DP Notes:-
+TODOs:- Count Ways using Space Optimized DP

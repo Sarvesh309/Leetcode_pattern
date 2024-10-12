@@ -25,11 +25,11 @@ public class IsMirrorTree {
     }
 
     boolean isSymmetric(Node leftNode, Node rightNode) {
-
         if (leftNode == null && rightNode == null)
             return true;
 
-        //This condition is basically simplified version of (left!=null && right==null) || (left==null && right!=null)
+        //This condition is basically simplified version of
+        // left!=null && right==null || left==null && right!=null
         if (leftNode == null || rightNode == null)
             return false;
 
