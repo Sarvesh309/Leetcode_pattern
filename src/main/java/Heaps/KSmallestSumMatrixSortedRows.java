@@ -1,4 +1,4 @@
-package Priority_queue;
+package Heaps;
 
 import java.util.List;
 import java.util.Map;

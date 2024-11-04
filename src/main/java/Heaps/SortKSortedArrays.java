@@ -1,4 +1,4 @@
-package Priority_queue;
+package Heaps;
 
 import java.util.*;
 import java.util.stream.Collectors;
