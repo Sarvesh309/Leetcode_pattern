@@ -9,35 +9,34 @@ package DynamicProgramming.recursion;
 //Output: 1
 
 public class PalindromePartitioning {
-
     public static void main(String[] args) {
-        String str = "aab";
-        System.out.println(findSubstringWithIndex(str, 0, str.length() - 1));
+        String str = "geeksforgeeks";
+        System.out.println(partitionsInSubstring(str, 0 , str.length()-1));
     }
 
-    private static int findSubstringWithIndex(String str, int left, int right) {
-        if (left >= right) {
+    private static int partitionsInSubstring(String str, int startIndex, int endIndex) {
+        if(startIndex==endIndex)
             return 0;
-        }
-        if (isPalindrome(str, left, right)) {
+
+        if(startIndex>endIndex)
+            return 0;
+
+        if (isPalindromic(str, startIndex,endIndex)) {
             return 0;
         }
         int temp = Integer.MAX_VALUE;
-        for (int k = left; k <= right - 1; k++) {
-            int left_partitions = findSubstringWithIndex(str, left, k);
-            int right_partitions = findSubstringWithIndex(str, k + 1, right);
-            int totalPartitionsForGivenString = 1 + left_partitions + right_partitions;
-            temp = Math.min(temp, totalPartitionsForGivenString);
+        for(int partitionIndex = startIndex; partitionIndex <= endIndex -1 ; partitionIndex++){
+            temp = Math.min(temp, (partitionsInSubstring(str, startIndex, partitionIndex) + partitionsInSubstring(str, partitionIndex + 1, endIndex))+1);
         }
         return temp;
     }
 
-    private static boolean isPalindrome(String str, int left, int right) {
-        while (left <= right) {
-            if (str.charAt(left) != str.charAt(right))
+    private static boolean isPalindromic(String str, int i, int j) {
+        while (i < j) {
+            if (str.charAt(i) != str.charAt(j))
                 return false;
-            left++;
-            right--;
+            i++;
+            j--;
         }
         return true;
     }
