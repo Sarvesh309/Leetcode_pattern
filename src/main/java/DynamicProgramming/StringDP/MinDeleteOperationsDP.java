@@ -1,4 +1,4 @@
-package DynamicProgramming.recursion;
+package DynamicProgramming.StringDP;
 
 //Given two strings word1 and word2, return the minimum number of steps required to make word1 and word2 the same.
 //

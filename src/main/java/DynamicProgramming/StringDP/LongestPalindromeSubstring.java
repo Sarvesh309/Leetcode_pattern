@@ -1,8 +1,13 @@
-package DynamicProgramming;
+package DynamicProgramming.StringDP;
+
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class LongestPalindromeSubstring {
     public static void main(String[] args) {
         String str = "geeks";
+        Set<Character> set = str.chars().mapToObj(ch -> (char) ch).collect(Collectors.toSet());
+
         boolean[][] dp = new boolean[str.length()][str.length()];
         System.out.println(Dp(str, dp));
     }

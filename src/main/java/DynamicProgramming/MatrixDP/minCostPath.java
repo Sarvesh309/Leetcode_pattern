@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.MatrixDP;
 
 public class minCostPath {
     public static void main(String[] args) {

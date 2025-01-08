@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 
 //TODO:- UNBOUNDED KNAPSACK
-public class CombinationSumUnbounded {
+public class targetSumUnbounded {
     static Set<List<Integer>> result = new HashSet<>();
 
     public static void main(String[] args) {

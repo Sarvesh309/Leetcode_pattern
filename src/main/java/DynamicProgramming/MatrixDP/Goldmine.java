@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package DynamicProgramming.MatrixDP;
 
 import java.util.Arrays;
 

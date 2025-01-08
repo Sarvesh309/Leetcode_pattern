@@ -9,7 +9,7 @@ package DynamicProgramming.recursion;
 //[30,40]
 
 //TODO:- 0/1 knapsack
-public class CombinationSumBounded {
+public class targetSumBounded {
     public static void main(String[] args) {
         int arr[] = {10, 20, 30, 40, 50};
         int target = 70;
