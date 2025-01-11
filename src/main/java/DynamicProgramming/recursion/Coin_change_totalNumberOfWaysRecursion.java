@@ -12,7 +12,7 @@ package DynamicProgramming.recursion;
 //5=1+1+1+1+1
 
 //TODO:- Unbounded knapsack
-public class Coin_change_totalNumberOfWays {
+public class Coin_change_totalNumberOfWaysRecursion {
     public static void main(String[] args) {
 
         int[] coins = new int[]{1, 2, 5};

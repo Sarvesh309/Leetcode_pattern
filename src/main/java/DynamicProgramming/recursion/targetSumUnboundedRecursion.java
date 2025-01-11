@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 
 //TODO:- UNBOUNDED KNAPSACK
-public class targetSumUnbounded {
+public class targetSumUnboundedRecursion {
     static Set<List<Integer>> result = new HashSet<>();
 
     public static void main(String[] args) {

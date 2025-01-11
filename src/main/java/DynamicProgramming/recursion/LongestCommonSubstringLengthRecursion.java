@@ -3,7 +3,8 @@ package DynamicProgramming.recursion;
 import static java.lang.Math.max;
 
 //Modification of LCSubsequence
-public class LongestCommonSubstringLength {
+
+public class LongestCommonSubstringLengthRecursion {
     public static void main(String[] args) {
         int lcs = LCS("abcdf", "abceh", 4, 4, 0);
         System.out.println(lcs);

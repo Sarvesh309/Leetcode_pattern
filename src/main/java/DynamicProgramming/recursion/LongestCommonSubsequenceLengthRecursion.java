@@ -6,7 +6,7 @@ package DynamicProgramming.recursion;
 //Output: 3
 //Explanation: The longest common subsequence is "ace" and its length is 3.
 
-public class LongestCommonSubsequenceLength {
+public class LongestCommonSubsequenceLengthRecursion {
     public static void main(String[] args) {
         String text1 = "abcde", text2 = "ace";
         int lcs = LCSTillStrings(text1, text2);

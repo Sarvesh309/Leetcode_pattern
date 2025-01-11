@@ -6,7 +6,7 @@ package DynamicProgramming.recursion;
 //You can select single element only once in an individual subset
 
 //TODO:- 0/1 knapsack
-public class CountOfSubsetsWithSumK {
+public class CountOfSubsetsWithSumKResursion {
     public static void main(String[] args) {
         int[] arr = new int[]{1, 1, 4, 5};
         int sum = 5;
