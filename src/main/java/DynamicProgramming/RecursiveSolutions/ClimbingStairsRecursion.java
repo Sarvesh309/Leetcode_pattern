@@ -1,4 +1,4 @@
-package DynamicProgramming.recursion;
+package DynamicProgramming.RecursiveSolutions;
 
 //You are climbing a staircase. It takes n steps to reach the top.
 //

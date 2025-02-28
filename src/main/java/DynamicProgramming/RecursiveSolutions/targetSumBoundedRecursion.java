@@ -1,4 +1,4 @@
-package DynamicProgramming.recursion;
+package DynamicProgramming.RecursiveSolutions;
 
 //Given an array of integers and target value, print all subsets which make the target value
 //You can choose one element only once in an individual subset

@@ -1,4 +1,4 @@
-package DynamicProgramming.recursion;
+package DynamicProgramming.RecursiveSolutions;
 
 import java.util.*;
 import java.util.stream.Collectors;

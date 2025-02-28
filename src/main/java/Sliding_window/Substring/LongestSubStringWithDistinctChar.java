@@ -21,7 +21,7 @@ public class LongestSubStringWithDistinctChar {
             char curr_ch = str.charAt(right);
             mp.put(curr_ch, mp.getOrDefault(curr_ch, 0) + 1);
 
-            //2nd step is to remove the characters until cetain condition is met
+            //2nd step is to remove the characters from left until certain condition is met
             while (mp.get(str.charAt(right)) > 1) {
                 char leftChar = str.charAt(left);
                 mp.put(leftChar, mp.get(leftChar) - 1);

@@ -1,4 +1,4 @@
-package DynamicProgramming.recursion;
+package DynamicProgramming.RecursiveSolutions;
 
 //Given an n x n array of integers matrix, return the minimum sum of any falling path through matrix.
 

@@ -1,4 +1,4 @@
-package DynamicProgramming.recursion;
+package DynamicProgramming.RecursiveSolutions;
 
 //Coin change 2
 //You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.

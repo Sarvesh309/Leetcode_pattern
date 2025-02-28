@@ -1,4 +1,4 @@
-package DynamicProgramming.recursion;
+package DynamicProgramming.RecursiveSolutions;
 
 //You are given an array 'arr' of size 'n' containing positive integers and a target sum 'k'.
 //Find the number of ways of selecting the elements from the array such that the sum of chosen elements

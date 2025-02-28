@@ -16,6 +16,7 @@ public class BFS {
     //2-> 4
     //3->
     //4->
+    //IMP - Entry in queue only if element visited
     private static void bfs(List<List<Integer>> adjList, int vertices) {
 
         List<Integer> result = new LinkedList<>();
