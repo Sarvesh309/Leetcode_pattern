@@ -1,7 +1,5 @@
 package DynamicProgramming.RecursiveSolutions;
 
-import java.util.Arrays;
-
 public class LISRecursion {
 
     public static void main(String[] args) {
@@ -35,13 +33,19 @@ public class LISRecursion {
         if (curr == nums.length)
             return 0;
 
+        //Answer from 1st branch considering the element in subsequence
+        // prev depicts answer till prev-Th index
+        // curr depicts output remaining from index
+
         int op1 = 0;
         if (prev == -1 || nums[prev] < nums[curr]) {
             op1 = 1 + LISHelper(curr, curr + 1, nums);
-        }                                 // i/p     o/p
+        }                       // i/p     o/p
 
+        //Answer from 2nd branch not considering the element in subsequence
         int op2 = LISHelper(prev, curr + 1, nums);
-                                      // i/p     o/p
+                            //i/p      o/p
+
         return Math.max(op1, op2);
     }
 }

@@ -52,9 +52,11 @@ public class DetectCycleDirectedGraphBFS {
                     queue.add(i);
             }
         }
+        //At the end if all the nodes are processed successfully ie:- they get inside the queue and get
+        //processed then it's no cycle otherwise later case
 
-//        if (result.size()==totalVertices){
+        if (result.size()==totalVertices){
             System.out.println(result);
-//        }
+        }
     }
 }

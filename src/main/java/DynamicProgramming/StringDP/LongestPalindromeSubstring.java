@@ -12,20 +12,22 @@ public class LongestPalindromeSubstring {
         System.out.println(Dp(str, dp));
     }
 
-    // g e e k s
+
+    private static String Dp(String str, boolean[][] dp) {
+        int longest_so_far = 0, start_index = str.length()-1;
+
+        for (int i = 0; i < str.length(); i++) {
+            longest_so_far = 1;
+            dp[i][i] = true;
+        }
+        // g e e k s
 //g
 //e
 //e
 //k
 //s
-    private static String Dp(String str, boolean[][] dp) {
-        int longest_so_far = 0, start_index = 0;
 
-        for (int i = 0; i < str.length(); i++) {
-            longest_so_far = 1;
-            start_index = i;
-            dp[i][i] = true;
-        }
+
         // Note here the end is fixed, start varies for each candidate substring
         for (int end = 0; end < dp.length; end++) {
             for (int start = 0; start < end; start++) {

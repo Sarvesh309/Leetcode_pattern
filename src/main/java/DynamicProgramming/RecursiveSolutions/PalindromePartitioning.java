@@ -26,7 +26,8 @@ public class PalindromePartitioning {
         }
         int temp = Integer.MAX_VALUE;
         for(int partitionIndex = startIndex; partitionIndex <= endIndex -1 ; partitionIndex++){
-            temp = Math.min(temp, (partitionsInSubstring(str, startIndex, partitionIndex) + partitionsInSubstring(str, partitionIndex + 1, endIndex))+1);
+            temp = Math.min(temp, (partitionsInSubstring(str, startIndex, partitionIndex) +
+                    partitionsInSubstring(str, partitionIndex + 1, endIndex))+1);
         }
         return temp;
     }
