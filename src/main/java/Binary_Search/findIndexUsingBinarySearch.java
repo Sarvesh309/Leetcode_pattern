@@ -2,7 +2,7 @@ package Binary_Search;
 
 import java.util.Arrays;
 
-public class removeElementFrmArray {
+public class findIndexUsingBinarySearch {
     public static void main(String[] args) {
         int[] arr = new int[]{1,2,3,4,5,6,7,8,9,12,32,44,53,76,54,321,555,232};
         int b = 53;

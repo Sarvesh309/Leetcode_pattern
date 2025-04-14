@@ -1,4 +1,4 @@
-package RecursionAndBacktracking.backtracking;
+package RecursionAndBacktracking.recursion;
 
 //Given a binary string s, partition the string into one or more substrings such that each substring is beautiful.
 //
