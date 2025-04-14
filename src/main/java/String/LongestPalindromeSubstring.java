@@ -7,17 +7,18 @@ public class LongestPalindromeSubstring {
         System.out.println(Dp(str, dp));
     }
 
-    // g e e k s
-//g
-//e
-//e
-//k
-//s
+            // end
+            // g e e k s
+//s     //g
+//t     //e
+//a     //e
+//r     //k
+//t     //s
+
     private static String Dp(String str, boolean[][] dp) {
-        int longest_so_far = 0, start_index = 0;
+        int longest_so_far = 1, start_index = 0;
 
         for (int i = 0; i < str.length(); i++) {
-            longest_so_far = 1;
             start_index = i;
             dp[i][i] = true;
         }
