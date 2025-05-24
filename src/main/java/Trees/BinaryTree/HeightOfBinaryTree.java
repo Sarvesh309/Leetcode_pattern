@@ -26,6 +26,7 @@ class HeightOfBinaryTree {
         if (node == null) {
             return 0;
         }
+        //post order
         int leftHeight = maxDepth(node.left);
         int rightHeight = maxDepth(node.right);
 

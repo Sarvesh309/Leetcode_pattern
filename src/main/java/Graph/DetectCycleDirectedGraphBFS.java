@@ -37,19 +37,19 @@ public class DetectCycleDirectedGraphBFS {
 
         for (int i = 0; i < inDegree.length; i++) {
             if (inDegree[i] == 0)
-                queue.push(i);
+                queue.offer(i);
         }
 
         List<Integer> result = new ArrayList<>();
         while (!queue.isEmpty()) {
-            int node = queue.pop();
+            int node = queue.poll();
             result.add(node);
 
             for (Integer i : adj.get(node)) {
                 inDegree[i]--;
 
                 if (inDegree[i]==0)
-                    queue.add(i);
+                    queue.offer(i);
             }
         }
         //At the end if all the nodes are processed successfully ie:- they get inside the queue and get

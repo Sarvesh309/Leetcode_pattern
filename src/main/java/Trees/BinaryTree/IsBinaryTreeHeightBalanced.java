@@ -39,7 +39,7 @@ public class IsBinaryTreeHeightBalanced {
         if (node == null) {
             return 0;
         }
-
+        //post order
         int leftHeight = findHeight(node.left);
         int rightHeight = findHeight(node.right);
 

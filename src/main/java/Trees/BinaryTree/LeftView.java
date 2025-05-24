@@ -34,6 +34,7 @@ class LeftView {
         if (root == null) {
             return;
         }
+        //preorder
         if (curr_level > max) {
             result.add(root.data);
             max = curr_level;

@@ -39,7 +39,7 @@ public class LISRecursion {
 
         int op1 = 0;
         if (prev == -1 || nums[prev] < nums[curr]) {
-            op1 = 1 + LISHelper(curr, curr + 1, nums);
+            op1 = LISHelper(curr, curr + 1, nums) + 1 ;
         }                       // i/p     o/p
 
         //Answer from 2nd branch not considering the element in subsequence

@@ -34,6 +34,7 @@ public class LCA_BinaryTree {
             return false;
 
         if (currNode.data == p.data || currNode.data == q.data) {
+            //initial lca candidate
             LCANode = currNode == p ? p : q;
             return true;
         }
@@ -42,6 +43,7 @@ public class LCA_BinaryTree {
         boolean isPresentInRightSubTree = isAnyGivenNodePresent(currNode.right, p, q);
 
         if (isPresentInLeftSubTree && isPresentInRightSubTree) {
+            //overwrite
             LCANode = currNode;
         }
 

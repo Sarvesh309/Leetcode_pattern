@@ -8,11 +8,11 @@ import java.util.stream.Collectors;
 public class MergeSort {
     public static void main(String[] args) {
         int[] arr = new int[]{5, 4, 1, 2, 3, 8,9,10, 11};
-        int[] ints = seperateAndMerge(arr, 0, arr.length - 1);
+        int[] ints = divideAndReturnSortedList(arr, 0, arr.length - 1);
         Arrays.stream(ints).forEach(System.out::println);
     }
 
-    static int[] seperateAndMerge(int[] nums, int startIndex, int endIndex){
+    static int[] divideAndReturnSortedList(int[] nums, int startIndex, int endIndex){
         //base cases
 
         if(startIndex == endIndex){
@@ -26,12 +26,12 @@ public class MergeSort {
         }
         int mid = (startIndex + endIndex)/2;
 
-        int[] list1 = seperateAndMerge(nums, startIndex, mid);
-        int[] list2 = seperateAndMerge(nums, mid+1, endIndex);
+        int[] list1 = divideAndReturnSortedList(nums, startIndex, mid);
+        int[] list2 = divideAndReturnSortedList(nums, mid+1, endIndex);
 
         Integer[] ans = merge(list1, list2);
 
-        return Arrays.stream(ans).mapToInt(Integer::intValue).toArray();
+        return Arrays.stream(ans).mapToInt(element->(int)element).toArray();
     }
 
 
@@ -60,7 +60,7 @@ public class MergeSort {
                     collect(Collectors.toList()).subList(i, arr1.length);
             result.addAll(sublist2);
         }
-        return result.toArray(new Integer[0]);
+        return result.toArray(Integer[]::new);
     }
 }
 
