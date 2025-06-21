@@ -37,7 +37,7 @@ public class MinCharsToMakePalindromic {
         //At the end of while loo[p, global_right will contain the optimal right index
         //Now append the substring starting from end to global_right in the str string to get final answer
 
-        String substring = str.substring(global_right + 1, str.length());
+        String substring = str.substring(global_right + 1);
         StringBuilder reversed = new StringBuilder(substring).reverse();
 
         System.out.println(reversed + str);
